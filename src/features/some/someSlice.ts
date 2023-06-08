@@ -22,7 +22,7 @@ const someSlice = createSlice({
     name: 'some',
     initialState,
     reducers: {
-        someReducer(state: SomeState, action: PayloadAction<boolean>) {
+        someReducer(state, action: PayloadAction<boolean>) {
             state.someField = action.payload;
         },
     },
