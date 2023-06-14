@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 
 import {MantineProvider, MantineThemeOverride} from '@mantine/core';
 
-import store from './features/store';
+import store from './redux/store';
 import App from "./App";
 
 const myTheme: MantineThemeOverride = {

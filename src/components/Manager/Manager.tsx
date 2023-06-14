@@ -5,7 +5,7 @@ import Stats from "./Stats";
 import {IconUserPlus} from "@tabler/icons-react";
 import SelectTransactionType from "../SelectTransactionType";
 import {TTransactionType} from "../../types/types";
-import {setTransactionType} from "../../features/manager/managerSlice";
+import {setTransactionType} from "../../redux/managerSlice";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 
 // interface ITabObj {

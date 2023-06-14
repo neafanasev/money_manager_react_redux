@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import managerSlice from "./manager/managerSlice";
+import managerSlice from "./managerSlice";
+import categoriesSlice from "./categoriesSlice";
 
 const store = configureStore({
     reducer: {
-        manager: managerSlice
+        manager: managerSlice,
+        categories: categoriesSlice
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({

@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit'
-import {IManagerState, TTransactionType} from "../../types/types";
+import {IManagerState, TTransactionType} from "../types/types";
 
 // export const initializeApp = createAsyncThunk(
 //     'users/getUsers',
