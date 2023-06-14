@@ -1,10 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit';
-import someSlice from "./some/someSlice";
+import managerSlice from "./manager/managerSlice";
 
 const store = configureStore({
     reducer: {
-        someSlice
+        manager: managerSlice
     },
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
