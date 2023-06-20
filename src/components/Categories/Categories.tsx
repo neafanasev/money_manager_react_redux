@@ -1,12 +1,17 @@
 import React, {memo} from 'react';
 import Category from "./Category";
+import {useAppSelector} from "../../hooks";
 
 const Categories = () => {
+    const categories = useAppSelector((state) => state.categories.categoriesList)
+
     return (
         <div>
-            <Category category={{name: 'food', type: 'expenses', backgroundColor: '#42aaff', iconColor: "#ffffff", iconName: 'food'}}
-                      size='md'
-            />
+            {categories.map((category) =>
+                <Category key={category.name}
+                          category={category}
+                          size={80}/>
+            )}
         </div>
     );
 };

@@ -21,5 +21,5 @@ export interface ICategoriesState {
 
 export interface ICategoryProps {
     category: ICategory,
-    size: string
+    size: number
 }
