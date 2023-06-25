@@ -2,24 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from "react-router-dom";
-
-import {MantineProvider, MantineThemeOverride} from '@mantine/core';
+import {ChakraProvider} from "@chakra-ui/react";
 
 import store from './redux/store';
 import App from "./App";
 
-const myTheme: MantineThemeOverride = {
-    colors: {
-
-    }
-}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
-        <MantineProvider withCSSVariables withGlobalStyles withNormalizeCSS>
+        <ChakraProvider>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
-        </MantineProvider>
+        </ChakraProvider>
     </Provider>,
 )
